@@ -1,3 +1,3 @@
 # Piano
  
-Simple piano app
+- [ ] Simple piano app
