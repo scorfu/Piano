@@ -1,0 +1,173 @@
+body {
+    background-image: url('./images/milky-way-starry-sky-night-sky-star-956999.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#pian {
+    max-height: 30vh;
+    background: linear-gradient(to bottom, #C4CE63 0%, #A40000 0%, #6385ce 100%);
+    padding: 12vh 2vw 2vh 2vw;
+    border-radius: 10px;
+    position: relative;
+}
+
+.clape-negre, .clape-albe {
+    position: relative;
+    display: flex;
+}
+
+.clape-albe .clapa {
+    width: 4.35vw;
+    height: 28.08vh;
+    background-color: #ffffff;
+    border: 1px solid black ;
+    border-radius: 0 0 10px 10px;
+}
+
+.clape-negre .clapa {
+    width: 2.8vw;
+    background: black;
+    height: 16.05vh;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+}
+
+.color-when-pressed {
+    background: linear-gradient(to bottom, #C4CE63 0%, #A40000 0%, #6385ce 100%)!important;
+}
+
+.clape-negre .clapa:nth-child(1) {left: 3vw}
+.clape-negre .clapa:nth-child(2) {left: 7.694vw}
+.clape-negre .clapa:nth-child(3) {left: 16.5625vw}
+.clape-negre .clapa:nth-child(4) {left: 21.5625vw}
+.clape-negre .clapa:nth-child(5) {left: 26.25vw}
+.clape-negre .clapa:nth-child(6) {left: 34.6875vw}
+.clape-negre .clapa:nth-child(7) {left: 39.375vw}
+.clape-negre .clapa:nth-child(8) {left: 43.75vw}
+.clape-negre .clapa:nth-child(9) {left: 51.4vw}
+.clape-negre .clapa:nth-child(10) {left: 56vw}
+
+#btn-sound-1, .btn-sound-js{
+    width: 4.375vw;
+    height: 7vh;
+    border-radius: 50px;
+    top: 1.25vw;
+}
+
+.isActive {
+    background: green;
+    animation: btnAnim 10s infinite;
+}
+
+@keyframes btnAnim {
+    0% { width: 4.4vw; background: rgb(203, 101, 101);}
+    25% { width: 4.8vh; background: rgb(63, 63, 137);}
+    50% { width: 4.4vw; background: rgb(51, 0, 128);}
+    75% { width: vw; background: rgb(81, 95, 173);}
+    100% { width: 4.4vw; background: rgb(224, 3, 224);}
+}
+
+.container-audio {
+    width: 85%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 8.125vw;
+    top: 9vh;
+
+}
+
+.container-audio .column1 {
+    width: 4.9999%;
+    margin: 3px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.container-audio .column1 .row {
+    height: 1.5vh;
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    width: 100%;
+    background: linear-gradient(to bottom, #C4CE63 0%, #A40000 0%, #6385ce 100%);
+    display: none;
+}
+
+.container-audio .column1:nth-child(even) {
+    background: linear-gradient(to bottom, #CE7777 0%, #A44767 50%, #0051C5 100%);
+}
+.container-audio .column1:nth-child(odd) {
+    background: linear-gradient(to bottom, #CE0000 0%, #A41952 50%, #2B3DC5 100%);
+}
+
+#btn-sound-1.isActive ~ .container-audio .column1 .row {
+    animation: dance 4s infinite ease-in-out;
+    display: block;
+}
+
+@keyframes rowanimation {
+    15% {
+        bottom: 10px;
+    }
+    30% {
+        bottom: 20px;
+    }
+    45% {
+        bottom: 30px;
+    }
+    60% {
+        bottom: 40px;
+    }
+    75% {
+        bottom: 50px;
+    }
+    95% {
+        bottom: 60px;
+    }
+}
+
+@keyframes dance {
+    0% {height: 3%; background: yellow;}
+    10% {height: 23%; background: rgb(255, 0, 38);}
+    20% {height: 43%; background: rgb(27, 86, 19);}
+    30% {height: 2%; background: rgb(241, 96, 104);}
+    40% {height: 86%; background: rgb(18, 41, 125);}
+    50% {height: 23%; background: rgb(27, 137, 132);}
+    55% {height: 23%; background: rgb(209, 223, 150);}
+    60% {height: 12%; background: rgb(134, 215, 233);}
+    70% {height: 60%; background: rgb(5, 88, 9);}
+    80% {height: 82%; background: rgb(116, 14, 119);}
+    90% {height: 91%; background: rgb(181, 79, 19);}
+    90% {height: 50%; background: rgb(187, 8, 8);}
+}
+
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(1) .row{animation-delay: -2.44s;}
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(2) .row{animation-delay: 0.14s;}
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(3) .row{animation-delay: 0.22s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(4) .row{animation-delay: -3.02s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(5) .row{animation-delay: -2.63s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(6) .row{animation-delay: -1.42s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(7) .row{animation-delay: 0.3s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(8) .row{animation-delay: -3.11s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(9) .row{animation-delay: -2.92s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(10) .row{animation-delay: -1.26s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(11) .row{animation-delay: -2.11s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(13) .row{animation-delay: 0.26s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(14) .row{animation-delay: 0.56s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(15) .row{animation-delay: 0.61s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(16) .row{animation-delay: 0.23s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(17) .row{animation-delay: 0.06s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(19) .row{animation-delay: 0.33s;} 
+#btn-sound-1.isActive ~ .container-audio .column1:nth-of-type(29) .row{animation-delay: 1s;} 
